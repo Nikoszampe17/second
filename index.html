@@ -32,7 +32,35 @@
       text-decoration: none;
       font-weight: bold;
       font-size: 1.05em;
+      position: relative; /* Προστέθηκε για το εφέ hover */
+      display: inline-block; /* Προστέθηκε για το εφέ hover */
+      padding-bottom: 5px; /* Προστέθηκε για το εφέ hover */
     }
+
+    nav a::after,
+    nav a::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(to right, #ff0000, #00ffff);
+      bottom: -2px; /* Προσαρμογή απόστασης */
+      left: 0;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.4s ease-out;
+    }
+
+    nav a::before {
+      top: -2px; /* Προσαρμογή απόστασης */
+      transform-origin: left;
+    }
+
+    nav a:hover::after,
+    nav a:hover::before {
+      transform: scaleX(1);
+    }
+
     .container {
       max-width: 900px;
       margin: auto;
