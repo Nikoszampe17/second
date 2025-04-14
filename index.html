@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nikos Zampetakis - P.T. AcuCert</title>
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
   <style>
     body {
@@ -16,16 +18,19 @@
       color: #333;
       font-size: 1.1em;
     }
+
     header {
       background-color: #2a9d8f;
       color: white;
       text-align: center;
       padding: 2em 1em;
     }
+
     header img {
       width: 160px;
       margin-bottom: 20px;
     }
+
     nav a {
       color: white;
       margin: 0 15px;
@@ -67,12 +72,16 @@
       margin: auto;
       padding: 20px;
     }
+
     section {
       margin-bottom: 40px;
     }
-    h1, h2 {
+
+    h1,
+    h2 {
       color: #264653;
     }
+
     footer {
       background-color: #264653;
       color: white;
@@ -80,6 +89,7 @@
       padding: 1.5em 1em;
       font-size: 0.9em;
     }
+
     .social-icons ul {
       display: flex;
       justify-content: center;
@@ -153,8 +163,97 @@
       color: inherit;
       text-decoration: none;
     }
+
+    #services {
+      overflow: hidden;
+      position: relative;
+    }
+
+    #services .services-carousel {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    #services .service-card {
+      position: relative;
+      width: 220px;
+      height: 220px;
+      margin: 20px;
+      flex: 0 0 auto;
+    }
+
+    #services .service-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: 0.5s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #services .service-slide1 {
+      background: #262626;
+    }
+
+    #services .service-slide2 {
+      background: #fff;
+      box-sizing: border-box;
+      padding: 20px;
+      text-align: center;
+    }
+
+    #services .service-slide2 h3 {
+      margin: 0;
+      padding: 0;
+      font-size: 1.2em;
+      color: #333;
+    }
+
+    #services .service-image {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #services .service-image img {
+      max-width: 80%;
+      max-height: 80%;
+      object-fit: contain;
+    }
+
+    #services .service-card:hover .service-slide1 {
+      transform: translateY(-100%);
+    }
+
+    #services .service-card:hover .service-slide2 {
+      transform: translateY(0);
+    }
+
+    #services .carousel-controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    #services .carousel-controls button {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+      padding: 10px;
+    }
   </style>
 </head>
+
 <body>
 
   <header>
@@ -172,19 +271,94 @@
   <div class="container">
     <section id="about">
       <h2>About Me</h2>
-      <p>Nikos Zampetakis is a physiotherapist holding a degree from the University of West Attica. His patient-centered approach focuses on thoroughly understanding the root cause of musculoskeletal issues to maximize treatment effectiveness. By applying key musculoskeletal physiotherapy principles in assessment, Nikos collaborates with each individual to develop a personalized treatment plan aimed at effectively managing pain and restoring mobility.</p>
+      <p>Nikos Zampetakis is a physiotherapist holding a degree from the University of West Attica. His patient-centered approach
+        focuses on thoroughly understanding the root cause of musculoskeletal issues to maximize treatment effectiveness. By
+        applying key musculoskeletal physiotherapy principles in assessment, Nikos collaborates with each individual to develop a
+        personalized treatment plan aimed at effectively managing pain and restoring mobility.</p>
     </section>
 
     <section id="services">
       <h2>Services</h2>
-      <ul>
-        <li>Acupuncture</li>
-        <li>Dry Needling</li>
-        <li>Postoperative Rehabilitation</li>
-        <li>Musculoskeletal Physiotherapy</li>
-        <li>Sports Injury Rehabilitation</li>
-        <li>Respiratory Physiotherapy</li>
-      </ul>
+      <div class="services-carousel">
+        <div class="service-card">
+          <div class="service-slide service-slide1">
+            <div class="service-content">
+              <div class="service-image">
+                <img src="Acupuncture.png" alt="Acupuncture" />
+              </div>
+            </div>
+          </div>
+          <div class="service-slide service-slide2">
+            <div class="service-content">
+              <h3>Acupuncture</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-slide service-slide1">
+            <div class="service-content">
+              <div class="service-image">
+                <img src="DryNeedling.png" alt="Dry Needling" />
+              </div>
+            </div>
+          </div>
+          <div class="service-slide service-slide2">
+            <div class="service-content">
+              <h3>Dry Needling</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-slide service-slide1">
+            <div class="service-content">
+              <div class="service-image">
+                <img src="PostOp.png" alt="Post Operative Rehabilitation" />
+              </div>
+            </div>
+          </div>
+          <div class="service-slide service-slide2">
+            <div class="service-content">
+              <h3>Post Operative Rehabilitation</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-slide service-slide1">
+            <div class="service-content">
+              <div class="service-image">
+                <img src="MuscPhys.png" alt="Musculoskeletal Physiotherapy" />
+              </div>
+            </div>
+          </div>
+          <div class="service-slide service-slide2">
+            <div class="service-content">
+              <h3>Musculoskeletal Physiotherapy</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-slide service-slide1">
+            <div class="service-content">
+              <div class="service-image">
+                <img src="SportsRehab.png" alt="Sports Injury Rehabilitation" />
+              </div>
+            </div>
+          </div>
+          <div class="service-slide service-slide2">
+            <div class="service-content">
+              <h3>Sports Injury Rehabilitation</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button class="carousel-prev">&#10094;</button>
+        <button class="carousel-next">&#10095;</button>
+      </div>
     </section>
 
     <section id="contact">
@@ -194,7 +368,9 @@
 
     <section id="appointment">
       <h2>Request an Appointment</h2>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfALp8shkWzRyOVWjovGGlyUZ8ngJVZKo23fd_zM9NzZzhtCQ/viewform?embedded=true" width="90%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfALp8shkWzRyOVWjovGGlyUZ8ngJVZKo23fd_zM9NzZzhtCQ/viewform?embedded=true"
+        width="90%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </section>
   </div>
 
@@ -221,5 +397,75 @@
     </div>
   </footer>
 
+  <script>
+    const carousel = document.querySelector('.services-carousel');
+    const cards = document.querySelectorAll('.service-card');
+    const prevButton = document.querySelector('.carousel-prev');
+    const nextButton = document.querySelector('.carousel-next');
+    const cardWidth = cards[0].offsetWidth + 40;
+    let currentIndex = 0;
+    let autoplayInterval;
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    function goToSlide(index) {
+      carousel.style.transform = `translateX(-${index * cardWidth}px)`;
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % cards.length;
+      goToSlide(currentIndex);
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+      goToSlide(currentIndex);
+    }
+
+    function startAutoplay() {
+      autoplayInterval = setInterval(nextSlide, 3000);
+    }
+
+    function stopAutoplay() {
+      clearInterval(autoplayInterval);
+    }
+
+    nextButton.addEventListener('click', () => {
+      stopAutoplay();
+      nextSlide();
+      startAutoplay();
+    });
+
+    prevButton.addEventListener('click', () => {
+      stopAutoplay();
+      prevSlide();
+      startAutoplay();
+    });
+
+    carousel.addEventListener('mouseenter', stopAutoplay);
+    carousel.addEventListener('mouseleave', startAutoplay);
+
+    carousel.addEventListener('touchstart', (e) => {
+      stopAutoplay();
+      touchStartX = e.touches[0].clientX;
+    });
+
+    carousel.addEventListener('touchmove', (e) => {
+      touchEndX = e.touches[0].clientX;
+    });
+
+    carousel.addEventListener('touchend', (e) => {
+      const touchDiff = touchStartX - touchEndX;
+      if (touchDiff > 50) {
+        nextSlide();
+      } else if (touchDiff < -50) {
+        prevSlide();
+      }
+      startAutoplay();
+    });
+
+    startAutoplay();
+  </script>
 </body>
+
 </html>
