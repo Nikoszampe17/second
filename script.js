@@ -1,3 +1,4 @@
+ document.addEventListener("DOMContentLoaded", function () {
 var swiper = new Swiper(".mySwiper", {
   loop: true,
   spaceBetween: 20,
@@ -25,4 +26,5 @@ var swiper = new Swiper(".mySwiper", {
       slidesPerView: 1,
     }
   }
+});
 });
