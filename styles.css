@@ -164,8 +164,10 @@ footer {
 }
 
 .swiper-slide {
-  width: 250px;
-  height: 300px;
+  flex-shrink: 0;
+  width: 150px;   /* Adjusted */
+  height: 200px;  /* Adjusted */
+  margin-right: 20px;
 }
 
 .service-card {
