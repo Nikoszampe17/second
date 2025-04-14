@@ -13,7 +13,7 @@ breakpoints: {
   0: {
     slidesPerView: 1,
   }
-}
+}, 
   spaceBetween: 30,
   navigation: {
     nextEl: ".swiper-button-next",
