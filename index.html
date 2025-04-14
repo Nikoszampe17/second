@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nikos Zampetakis - P.T. AcuCert</title>
+  <title>Nikos Zampetakis - P.T. CertAcu</title>
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
     integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -176,67 +176,66 @@
 
     #services .service-card {
       position: relative;
-      width: 220px;
-      height: 220px;
+      width: 200px;
+      height: 250px;
       margin: 20px;
       flex: 0 0 auto;
     }
 
-    #services .service-slide {
+    #services .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+
+    #services .service-card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    #services .card-front,
+    #services .card-back {
       position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
-      transition: 0.5s ease;
+      backface-visibility: hidden;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      border-radius: 0.5rem;
     }
 
-    #services .service-slide1 {
-      background: #262626;
+    #services .card-front {
+      background: white;
+      border: 1px solid #e5e7eb;
     }
 
-    #services .service-slide2 {
-      background: #fff;
-      box-sizing: border-box;
-      padding: 20px;
-      text-align: center;
-      height: 100%;
+    #services .card-back {
+      background: #8b5cf6;
+      color: white;
+      transform: rotateY(180deg);
     }
 
-    #services .service-slide2 h3 {
-      margin: 0;
-      padding: 0;
-      font-size: 1.2em;
-      color: #333;
-      height: auto;
-      line-height: 1.2em;
-    }
-
-    #services .service-image {
+    #services .card-front .service-image {
       width: 100%;
       height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
 
-    #services .service-image img {
+    #services .card-front .service-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center;
     }
 
-    #services .service-card:hover .service-slide1 {
-      transform: translateY(100%);
+    #services .card-back .service-content {
+      text-align: center;
+      padding: 1rem;
     }
 
-    #services .service-card:hover .service-slide2 {
-      transform: translateY(0);
+    #services .card-back .service-content h3 {
+      margin: 0;
+      font-size: 1.2rem;
     }
 
     #services .carousel-controls {
@@ -264,7 +263,7 @@
   <header>
     <img src="logo.png" alt="Nikos Zampetakis Logo" />
     <h1>Nikos Zampetakis</h1>
-    <p>P.T., AcuCert</p>
+    <p>P.T., CertAcu</p>
     <nav>
       <a href="#about">About</a>
       <a href="#services">Services</a>
@@ -286,75 +285,75 @@
       <h2>Services</h2>
       <div class="services-carousel">
         <div class="service-card">
-          <div class="service-slide service-slide1">
-            <div class="service-content">
-              <h3>Acupuncture</h3>
-            </div>
-          </div>
-          <div class="service-slide service-slide2">
-            <div class="service-content">
+          <div class="card-inner">
+            <div class="card-front">
               <div class="service-image">
                 <img src="Acupuncture.png" alt="Acupuncture" />
               </div>
             </div>
+            <div class="card-back">
+              <div class="service-content">
+                <h3>Acupuncture</h3>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="service-card">
-          <div class="service-slide service-slide1">
-            <div class="service-content">
-              <h3>Dry Needling</h3>
-            </div>
-          </div>
-          <div class="service-slide service-slide2">
-            <div class="service-content">
+          <div class="card-inner">
+            <div class="card-front">
               <div class="service-image">
                 <img src="DryNeedling.png" alt="Dry Needling" />
               </div>
             </div>
+            <div class="card-back">
+              <div class="service-content">
+                <h3>Dry Needling</h3>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="service-card">
-          <div class="service-slide service-slide1">
-            <div class="service-content">
-              <h3>Post Operative Rehabilitation</h3>
-            </div>
-          </div>
-          <div class="service-slide service-slide2">
-            <div class="service-content">
+          <div class="card-inner">
+            <div class="card-front">
               <div class="service-image">
                 <img src="PostOp.png" alt="Post Operative Rehabilitation" />
               </div>
             </div>
-          </div>
-        </div>
-
-        <div class="service-card">
-          <div class="service-slide service-slide1">
-            <div class="service-content">
-              <h3>Musculoskeletal Physiotherapy</h3>
-            </div>
-          </div>
-          <div class="service-slide service-slide2">
-            <div class="service-content">
-              <div class="service-image">
-                <img src="MuscPhys.png" alt="Musculoskeletal Physiotherapy" />
+            <div class="card-back">
+              <div class="service-content">
+                <h3>Post Operative Rehabilitation</h3>
               </div>
             </div>
           </div>
         </div>
 
         <div class="service-card">
-          <div class="service-slide service-slide1">
-            <div class="service-content">
-              <h3>Sports Injury Rehabilitation</h3>
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="service-image">
+                <img src="MuscPhys.png" alt="Musculoskeletal Physiotherapy" />
+              </div>
+            </div>
+            <div class="card-back">
+              <div class="service-content">
+                <h3>Musculoskeletal Physiotherapy</h3>
+              </div>
             </div>
           </div>
-          <div class="service-slide service-slide2">
-            <div class="service-content">
+        </div>
+
+        <div class="service-card">
+          <div class="card-inner">
+            <div class="card-front">
               <div class="service-image">
                 <img src="SportsRehab.png" alt="Sports Injury Rehabilitation" />
+              </div>
+            </div>
+            <div class="card-back">
+              <div class="service-content">
+                <h3>Sports Injury Rehabilitation</h3>
               </div>
             </div>
           </div>
