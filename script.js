@@ -1,20 +1,10 @@
-// Initialize Swiper
 var swiper = new Swiper(".mySwiper", {
   loop: true,
-  
-  slidesPerView: 3,
-breakpoints: {
-  768: {
-    slidesPerView: 3,
-  },
-  480: {
-    slidesPerView: 2,
-  },
-  0: {
-    slidesPerView: 1,
-  }
-}, 
   spaceBetween: 20,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -23,8 +13,16 @@ breakpoints: {
     el: ".swiper-pagination",
     clickable: true,
   },
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
+  slidesPerView: 3,
+  breakpoints: {
+    1024: {
+      slidesPerView: 2.5,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1,
+    }
+  }
 });
