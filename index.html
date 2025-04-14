@@ -1,21 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nikos Zampetakis - P.T. CertAcu</title>
 
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.css"
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Swiper & Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.css"/>
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script> <!-- Replace with your FA kit ID -->
 
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #333;
+      font-size: 1.1em;
+    }
+
+    header {
+      background-color: #2a9d8f;
+      color: white;
+      text-align: center;
+      padding: 2em 1em;
+    }
+
+    header img {
+      width: 160px;
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.05em;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    nav a::after,
+    nav a::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(to right, white, #2a9d8f);
+      bottom: -2px;
+      left: 0;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.4s ease-out;
+    }
+
+    nav a::before {
+      top: -2px;
+      transform-origin: left;
+      background: linear-gradient(to left, white, #2a9d8f);
+    }
+
+    nav a:hover::after,
+    nav a:hover::before {
+      transform: scaleX(1);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h1, h2 {
+      color: #264653;
+    }
+
+    footer {
+      background-color: #264653;
+      color: white;
+      text-align: center;
+      padding: 1.5em 1em;
+      font-size: 0.9em;
+    }
+
+    .social-icons ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+    }
+
+    .social-icons ul li {
+      margin: 0 10px;
+    }
+
+    .social-icons ul li a {
+      width: 40px;
+      height: 40px;
+      background-color: #fff;
+      text-align: center;
+      line-height: 40px;
+      font-size: 20px;
+      display: block;
+      border-radius: 50%;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid #fff;
+      z-index: 1;
+      transition: background-color 0.3s ease;
+    }
+
+    .social-icons ul li a .icon {
+      position: relative;
+      color: #333;
+      transition: .5s;
+      z-index: 3;
+    }
+
+    .social-icons ul li a:hover .icon {
+      color: #fff;
+      transform: rotateY(360deg);
+    }
+
+    .social-icons ul li a:before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #f00;
+      transition: .5s;
+      z-index: 2;
+    }
+
+    .social-icons ul li a:hover:before {
+      top: 0;
+    }
+
+    .social-icons ul li:nth-child(1) a:before {
+      background: #3b5999;
+    }
+
+    .social-icons ul li:nth-child(2) a:before {
+      background: #e1306c;
+    }
+
+    .social-icons ul li:nth-child(3) a:before {
+      background: #00b87a;
+    }
+
+    #services {
+      overflow: hidden;
+      position: relative;
+      min-height: 300px;
+    }
+
+    .swiper-container {
+      width: 100%;
+      padding: 30px 0;
+    }
+
+    .swiper-slide {
+      width: 250px;
+      height: 300px;
+    }
+
+    .service-card {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+
+    .service-card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.5rem;
+    }
+
+    .card-front {
+      background: white;
+      border: 1px solid #e5e7eb;
+    }
+
+    .card-back {
+      background: #8b5cf6;
+      color: white;
+      transform: rotateY(180deg);
+    }
+
+    .card-front .service-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
 </head>
 
 <body>
 
   <header>
-    <img src="logo.png" alt="Nikos Zampetakis Logo" />
+    <img src="logo.png" alt="Nikos Zampetakis Logo"/>
     <h1>Nikos Zampetakis</h1>
     <p>P.T., CertAcu</p>
     <nav>
@@ -29,22 +239,19 @@
   <div class="container">
     <section id="about">
       <h2>About Me</h2>
-      <p>Nikos Zampetakis is a physiotherapist holding a degree from the University of West Attica. His patient-centered approach
-        focuses on thoroughly understanding the root cause of musculoskeletal issues to maximize treatment effectiveness. By
-        applying key musculoskeletal physiotherapy principles in assessment, Nikos collaborates with each individual to develop a
-        personalized treatment plan aimed at effectively managing pain and restoring mobility.</p>
+      <p>Nikos Zampetakis is a physiotherapist holding a degree from the University of West Attica...</p>
     </section>
 
     <section id="services">
       <h2>Services</h2>
-      <div class="swiper mySwiper">
+      <div class="swiper-container mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="service-card">
               <div class="card-inner">
                 <div class="card-front">
                   <div class="service-image">
-                    <img src="Acupuncture.png" alt="Acupuncture" />
+                    <img src="Acupuncture.png" alt="Acupuncture"/>
                   </div>
                 </div>
                 <div class="card-back">
@@ -55,12 +262,13 @@
               </div>
             </div>
           </div>
+
           <div class="swiper-slide">
             <div class="service-card">
               <div class="card-inner">
                 <div class="card-front">
                   <div class="service-image">
-                    <img src="DryNeedling.png" alt="Dry Needling" />
+                    <img src="DryNeedling.png" alt="Dry Needling"/>
                   </div>
                 </div>
                 <div class="card-back">
@@ -71,55 +279,10 @@
               </div>
             </div>
           </div>
-          <div class="swiper-slide">
-            <div class="service-card">
-              <div class="card-inner">
-                <div class="card-front">
-                  <div class="service-image">
-                    <img src="PostOp.png" alt="Post Operative Rehabilitation" />
-                  </div>
-                </div>
-                <div class="card-back">
-                  <div class="service-content">
-                    <h3>Post Operative Rehabilitation</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="service-card">
-              <div class="card-inner">
-                <div class="card-front">
-                  <div class="service-image">
-                    <img src="MuscPhys.png" alt="Musculoskeletal Physiotherapy" />
-                  </div>
-                </div>
-                <div class="card-back">
-                  <div class="service-content">
-                    <h3>Musculoskeletal Physiotherapy</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="service-card">
-              <div class="card-inner">
-                <div class="card-front">
-                  <div class="service-image">
-                    <img src="SportsRehab.png" alt="Sports Injury Rehabilitation" />
-                  </div>
-                </div>
-                <div class="card-back">
-                  <div class="service-content">
-                    <h3>Sports Injury Rehabilitation</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+
+          <!-- Add more slides as needed -->
         </div>
+
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
@@ -133,9 +296,8 @@
 
     <section id="appointment">
       <h2>Request an Appointment</h2>
-      <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSfALp8shkWzRyOVWjovGGlyUZ8ngJVZKo23fd_zM9NzZzhtCQ/viewform?embedded=true"
-        width="90%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfALp8shkWzRyOVWjovGGlyUZ8ngJVZKo23fd_zM9NzZzhtCQ/viewform?embedded=true"
+              width="90%" height="800" frameborder="0">Loading…</iframe>
     </section>
   </div>
 
@@ -143,29 +305,33 @@
     <p>&copy; 2025 Nikos Zampetakis</p>
     <div class="social-icons">
       <ul>
-        <li>
-          <a href="https://www.facebook.com/nikos.zampetakis.52" target="_blank">
-            <i class="fab fa-facebook-f icon"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/nikoszampe17/" target="_blank">
-            <i class="fab fa-instagram icon"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.researchgate.net/profile/Nikolaos-Zampetakis" target="_blank">
-            <i class="fab fa-researchgate icon"></i>
-          </a>
-        </li>
+        <li><a href="https://www.facebook.com/nikos.zampetakis.52" target="_blank"><i class="fab fa-facebook-f icon"></i></a></li>
+        <li><a href="https://www.instagram.com/nikoszampe17/" target="_blank"><i class="fab fa-instagram icon"></i></a></li>
+        <li><a href="https://www.researchgate.net/profile/Nikolaos-Zampetakis" target="_blank"><i class="fab fa-researchgate icon"></i></a></li>
       </ul>
     </div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"
-    integrity="sha512-y/39jvX0v8/1wX36Vj0u23a9677KCmz0M6jNsa481NPZKt6vGw5vogu69ct7Ecwp9jVc8+nQppjza6u1WvFsw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="script.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    });
+  </script>
 </body>
-
 </html>
