@@ -230,3 +230,15 @@ footer {
   margin: 0;
   font-size: 1.2rem;
 }
+
+.swiper-wrapper {
+  will-change: transform;
+  transform: translateZ(0); /* Improves GPU acceleration for smoother transitions */
+}
+
+.swiper {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  perspective: 1000px;
+}
+
