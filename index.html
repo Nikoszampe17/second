@@ -411,6 +411,7 @@
     let autoplayInterval;
     let touchStartX = 0;
     let touchEndX = 0;
+    let isTransitioning = false;
 
     // Κλωνοποίηση των πρώτων και τελευταίων καρτών
     const firstCardClone = cards[0].cloneNode(true);
@@ -426,15 +427,22 @@
     carousel.style.transform = `translateX(-${cardWidth}px)`;
 
     function goToSlide(index, animated = true) {
+      if (isTransitioning) return;
+      isTransitioning = true;
+
       carousel.style.transition = animated ? 'transform 0.5s ease-in-out' : 'none';
       carousel.style.transform = `translateX(-${index * cardWidth}px)`;
       currentIndex = index;
+
+      setTimeout(() => {
+        isTransitioning = false;
+      }, 500);
     }
 
     function nextSlide() {
       if (currentIndex >= updatedCards.length - 2) {
         goToSlide(1, false);
-        setTimeout(() => goToSlide(2), 0);
+        setTimeout(() => goToSlide(2), 10);
       } else {
         goToSlide(currentIndex + 1);
       }
@@ -443,7 +451,7 @@
     function prevSlide() {
       if (currentIndex <= 1) {
         goToSlide(updatedCards.length - 2, false);
-        setTimeout(() => goToSlide(updatedCards.length - 3), 0);
+        setTimeout(() => goToSlide(updatedCards.length - 3), 10);
       } else {
         goToSlide(currentIndex - 1);
       }
