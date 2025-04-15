@@ -150,7 +150,6 @@ footer {
   background: #00b87a; /* ResearchGate color */
 }
 
-
 /* Services Section - Swiper + Flip Cards */
 #services {
   overflow: hidden;
@@ -176,7 +175,6 @@ footer {
   height: 100%;
   transform: translateZ(0); /* Triggers GPU rendering */
 }
-
 
 .card-inner {
   position: relative;
@@ -241,4 +239,3 @@ footer {
   -webkit-backface-visibility: hidden;
   perspective: 1000px;
 }
-
