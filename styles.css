@@ -239,3 +239,50 @@ footer {
   -webkit-backface-visibility: hidden;
   perspective: 1000px;
 }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+  align-items: start;
+}
+
+.contact-info p {
+  margin: 0.8em 0;
+  font-size: 1.05em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-info i {
+  color: #2a9d8f;
+  min-width: 20px;
+}
+
+.contact-info a {
+  color: #2a9d8f;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Social Icons in Contact */
+.contact-social ul {
+  margin-top: 20px;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form iframe {
+    height: 600px;
+  }
+}
+
