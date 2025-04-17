@@ -532,3 +532,44 @@ footer {
   }
 }
 
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(42, 157, 143, 0.95); /* Semi-transparent background */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+    z-index: 999; /* Make sure it stays above other content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .main-nav.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  /* Optional: make menu links larger for better touch targets */
+  .main-nav a {
+    padding: 0.75rem 0;
+    font-size: 1.1rem;
+    text-align: right;
+  }
+
+  .top-header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+}
+
