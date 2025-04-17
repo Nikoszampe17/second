@@ -479,3 +479,49 @@ footer {
 #about {
   padding-top: 100px; /* Adjust based on header height */
 }
+
+/* Hamburger Button Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: 0.3s ease;
+}
+
+/* Top-right position */
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #2a9d8f;
+    position: absolute;
+    top: 70px; /* adjust based on header height */
+    right: 0;
+    width: 100%;
+    text-align: right;
+    padding: 1rem;
+  }
+
+  .main-nav.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+  }
+
+  .header-container {
+    position: relative;
+  }
+}
+
