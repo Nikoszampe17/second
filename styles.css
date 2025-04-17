@@ -211,6 +211,13 @@ header img {
   animation-delay: 0.4s;
 }
 
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
 /* Navigation */
 nav a {
   color: white;
