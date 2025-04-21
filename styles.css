@@ -48,7 +48,7 @@ header img {
 }
 
 .logo {
-  height: 70px;
+  height: 80px;
   width: auto;
 }
 
@@ -90,6 +90,10 @@ header img {
   font-size: 0.9em;
 }
 
+.identity .title {
+  color: white; /* Turns the title text white */
+}
+ 
 .identity .name {
   font-weight: bold;
   font-size: 1em;
