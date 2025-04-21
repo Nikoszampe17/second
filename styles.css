@@ -573,3 +573,10 @@ footer {
   }
 }
 
+.service-image img {
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none; /* iOS long-press */
+}
+
+
