@@ -17,7 +17,7 @@ header {
 }
 
 header img {
-  width: 160px;
+  width: 180px; /* Increased logo size */
   margin-bottom: 20px;
 }
 
@@ -93,7 +93,7 @@ header img {
 .identity .title {
   color: white; /* Turns the title text white */
 }
- 
+
 .identity .name {
   font-weight: bold;
   font-size: 1em;
@@ -155,12 +155,9 @@ header img {
   }
 
   .header-container {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column; /* Keep text not centered on mobile */
   }
 }
-
-
 
 .identity .name {
   font-weight: 700;
@@ -187,7 +184,6 @@ header img {
 .main-nav a:nth-child(2) { animation-delay: 0.8s; }
 .main-nav a:nth-child(3) { animation-delay: 1s; }
 
-/* Animations */
 @keyframes fadeIn {
   to {
     opacity: 1;
@@ -221,8 +217,6 @@ header img {
   object-fit: cover;
 }
 
-
-/* Navigation */
 nav a {
   color: white;
   margin: 0 15px;
@@ -259,7 +253,6 @@ nav a:hover::before {
   transform: scaleX(1);
 }
 
-/* Layout */
 .container {
   max-width: 900px;
   margin: auto;
@@ -274,7 +267,6 @@ h1, h2 {
   color: #264653;
 }
 
-/* Footer */
 footer {
   background-color: #264653;
   color: white;
@@ -340,18 +332,17 @@ footer {
 }
 
 .social-icons ul li:nth-child(1) a:before {
-  background: #3b5999; /* Facebook color */
+  background: #3b5999;
 }
 
 .social-icons ul li:nth-child(2) a:before {
-  background: #e1306c; /* Instagram color */
+  background: #e1306c;
 }
 
 .social-icons ul li:nth-child(3) a:before {
-  background: #00b87a; /* ResearchGate color */
+  background: #00b87a;
 }
 
-/* Services Section - Swiper + Flip Cards */
 #services {
   overflow: hidden;
   position: relative;
@@ -365,8 +356,8 @@ footer {
 
 .swiper-slide {
   flex-shrink: 0;
-  width: 150px;   /* Adjusted */
-  height: 200px;  /* Adjusted */
+  width: 150px;
+  height: 200px;
   margin-right: 15px;
 }
 
@@ -374,7 +365,7 @@ footer {
   position: relative;
   width: 100%;
   height: 100%;
-  transform: translateZ(0); /* Triggers GPU rendering */
+  transform: translateZ(0);
 }
 
 .card-inner {
@@ -396,7 +387,7 @@ footer {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  -webkit-backface-visibility: hidden; /* Safari */
+  -webkit-backface-visibility: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -432,7 +423,7 @@ footer {
 
 .swiper-wrapper {
   will-change: transform;
-  transform: translateZ(0); /* Improves GPU acceleration for smoother transitions */
+  transform: translateZ(0);
 }
 
 .swiper {
@@ -471,12 +462,10 @@ footer {
   text-decoration: underline;
 }
 
-/* Social Icons in Contact */
 .contact-social ul {
   margin-top: 20px;
 }
 
-/* Mobile responsive */
 @media screen and (max-width: 768px) {
   .contact-grid {
     grid-template-columns: 1fr;
@@ -488,10 +477,9 @@ footer {
 }
 
 #about {
-  padding-top: 100px; /* Adjust based on header height */
+  padding-top: 100px;
 }
 
-/* Hamburger Button Styles */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -506,14 +494,13 @@ footer {
   transition: 0.3s ease;
 }
 
-/* Top-right position */
 @media (max-width: 768px) {
   .main-nav {
     display: none;
     flex-direction: column;
     background-color: #2a9d8f;
     position: absolute;
-    top: 70px; /* adjust based on header height */
+    top: 70px;
     right: 0;
     width: 100%;
     text-align: right;
@@ -540,46 +527,12 @@ footer {
   .main-nav {
     display: none;
     flex-direction: column;
-    background-color: rgba(42, 157, 143, 0.95); /* Semi-transparent background */
+    background-color: rgba(42, 157, 143, 0.95);
     position: absolute;
     top: 100%;
     right: 0;
     width: 100%;
     padding: 1rem;
-    z-index: 999; /* Make sure it stays above other content */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 99;
   }
-
-  .main-nav.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: flex;
-    position: absolute;
-    right: 20px;
-    top: 25px;
-    cursor: pointer;
-    z-index: 1000;
-  }
-
-  /* Optional: make menu links larger for better touch targets */
-  
-  .main-nav a {
-    padding: 0.75rem 0;
-    font-size: 1.1rem;
-    text-align: right;
-  }
-
-  .top-header {
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-  }
-}
-
-.service-image img {
-  user-select: none;
-  -webkit-user-drag: none;
-  -webkit-touch-callout: none; /* iOS long-press */
 }
