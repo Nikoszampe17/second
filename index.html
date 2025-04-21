@@ -8,51 +8,29 @@
 
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-
-  <!-- Font Awesome (for social icons) -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
   <!-- Your custom styles -->
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
- <header class="top-header">
-  <div class="header-container">
-    <div class="logo-area">
-      <img src="logo.png" alt="Nikos Zampetakis Logo">
-      <div class="identity">
-        <span class="name">Nikolaos Zampetakis</span>
-        <span class="title">P.T., CertAcu</span>
+  <header class="top-header">
+    <div class="header-container">
+      <div class="logo-area">
+        <img src="logo.png" alt="Nikos Zampetakis Logo" />
+        <div class="identity">
+          <span class="name">Nikolaos Zampetakis</span>
+          <span class="title">P.T., CertAcu</span>
+        </div>
       </div>
     </div>
-
-    <nav class="main-nav" id="navbar">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <div id="hamburger" class="hamburger">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-
-  
-</nav>
-
-</header>
-
-
+  </header>
 
   <div class="container">
     <section id="about">
       <h2>About Me</h2>
-      <p>Nikos Zampetakis is a physiotherapist holding a degree from the University of West Attica. His patient-centered approach
-        focuses on thoroughly understanding the root cause of musculoskeletal issues to maximize treatment effectiveness. By
-        applying key musculoskeletal physiotherapy principles in assessment, Nikos collaborates with each individual to develop a
-        personalized treatment plan aimed at effectively managing pain and restoring mobility.</p>
+      <p>Nikos Zampetakis is a physiotherapist holding a degree from the University of West Attica...</p>
     </section>
 
     <section id="services">
@@ -60,7 +38,8 @@
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
 
-          <!-- Service Cards (Same as before) -->
+          <!-- Service Cards -->
+          <!-- repeat for each service -->
           <div class="swiper-slide">
             <div class="service-card">
               <div class="card-inner">
@@ -78,7 +57,7 @@
             </div>
           </div>
 
-          <div class="swiper-slide">
+         <div class="swiper-slide">
             <div class="service-card">
               <div class="card-inner">
                 <div class="card-front">
@@ -146,92 +125,61 @@
             </div>
           </div>
 
+
         </div>
 
-        <!-- Swiper navigation -->
+        <!-- Swiper nav -->
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
       </div>
     </section>
 
-  
-      <section id="contact" class="container">
-        <h2> Contact </h2>
-        
-  <h3>Need more information or have a question? </h3>
-  <div class="contact-grid">
-    
-    <!-- Left: Contact Info & Social -->
-    <div class="contact-info">
-      <p><i class="fas fa-user"></i> Nikolaos Zampetakis</p>
-      <p><i class="fas fa-envelope"></i> 
-        <a href="mailto:zampetakisnikos@gmail.com">zampetakisnikos@gmail.com</a>
-      </p>
-      <p><i class="fas fa-phone"></i> 
-        <a href="tel:+306987752219">+30 698 775 2219</a>
-      </p>
+    <section id="contact" class="container">
+      <h2>Contact</h2>
+      <h3>Need more information or have a question?</h3>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p><i class="fas fa-user"></i> Nikolaos Zampetakis</p>
+          <p><i class="fas fa-envelope"></i>
+            <a href="mailto:zampetakisnikos@gmail.com">zampetakisnikos@gmail.com</a>
+          </p>
+          <p><i class="fas fa-phone"></i>
+            <a href="tel:+306987752219">+30 698 775 2219</a>
+          </p>
 
-      <!-- Social Icons -->
-      <div class="social-icons contact-social">
-        <ul>
-          <li><a href="https://www.facebook.com/nikos.zampetakis.52"><span class="icon fab fa-facebook-f"></span></a></li>
-          <li><a href="https://www.instagram.com/nikoszampe17/"><span class="icon fab fa-instagram"></span></a></li>
-          <li><a href="https://www.researchgate.net/profile/Nikolaos-Zampetakis"><span class="icon fab fa-researchgate"></span></a></li>
-        </ul>
+          <!-- Social Icons -->
+          <div class="social-icons contact-social">
+            <ul>
+              <li><a href="https://www.facebook.com/nikos.zampetakis.52" target="_blank"><span class="icon fab fa-facebook-f"></span></a></li>
+              <li><a href="https://www.instagram.com/nikoszampe17/" target="_blank"><span class="icon fab fa-instagram"></span></a></li>
+              <li><a href="https://www.researchgate.net/profile/Nikolaos-Zampetakis" target="_blank"><span class="icon fab fa-researchgate"></span></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <iframe 
+            src="https://docs.google.com/forms/d/e/1FAIpQLScMqDC9OP1XmYtU_R954kgmwaaB87J5xwBwmY4nHOs7rg_kjg/viewform?embedded=true" 
+            width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
       </div>
-    </div>
-
-    <!-- Right: Google Form -->
-    <div class="contact-form">
-      <iframe 
-        src="https://docs.google.com/forms/d/e/1FAIpQLScMqDC9OP1XmYtU_R954kgmwaaB87J5xwBwmY4nHOs7rg_kjg/viewform?embedded=true" 
-        width="100%" 
-        height="500" 
-        frameborder="0" 
-        marginheight="0" 
-        marginwidth="0">Loading…</iframe>
-    </div>
-
-  </div>
-</section>
-
     </section>
-
-    
   </div>
-
-  <!-- FontAwesome CDN for icons -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-    crossorigin="anonymous">
 
   <footer>
     <p>&copy; 2025 Nikos Zampetakis</p>
     <div class="social-icons">
       <ul>
-        <li>
-          <a href="https://www.facebook.com/nikos.zampetakis.52" target="_blank">
-            <i class="fab fa-facebook-f icon"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/nikoszampe17/" target="_blank">
-            <i class="fab fa-instagram icon"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.researchgate.net/profile/Nikolaos-Zampetakis" target="_blank">
-            <i class="fab fa-researchgate icon"></i>
-          </a>
-        </li>
+        <li><a href="https://www.facebook.com/nikos.zampetakis.52" target="_blank"><i class="fab fa-facebook-f icon"></i></a></li>
+        <li><a href="https://www.instagram.com/nikoszampe17/" target="_blank"><i class="fab fa-instagram icon"></i></a></li>
+        <li><a href="https://www.researchgate.net/profile/Nikolaos-Zampetakis" target="_blank"><i class="fab fa-researchgate icon"></i></a></li>
       </ul>
     </div>
   </footer>
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
   <!-- Your JS -->
   <script src="script.js"></script>
 </body>
