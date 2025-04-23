@@ -422,15 +422,3 @@ footer {
   -webkit-user-drag: none;
   -webkit-touch-callout: none;
 }
-
-@media (max-width: 768px) {
-  .header-container {
-    justify-content: flex-start;
-    padding-left: 1.2em; /* You can adjust this value */
-  }
-
-  .logo-area {
-    justify-content: flex-start;
-  }
-}
-
