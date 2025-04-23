@@ -42,6 +42,27 @@ header img {
   flex-wrap: wrap;
 }
 
+.language-switch {
+  margin-left: auto;
+}
+
+.language-switch button {
+  background-color: #264653;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.language-switch button:hover {
+  background-color: #2a9d8f;
+}
+
+
+
 .logo-area {
   display: flex;
   align-items: center;
