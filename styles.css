@@ -422,3 +422,18 @@ footer {
   -webkit-user-drag: none;
   -webkit-touch-callout: none;
 }
+
+@media screen and (max-width: 768px) {
+  .logo-area {
+    margin-left: 0;
+    padding-left: 10px; /* adjust this value as needed */
+  }
+
+  .header-container {
+    justify-content: flex-start;
+  }
+
+  .main-nav {
+    margin-left: auto;
+  }
+}
