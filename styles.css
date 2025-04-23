@@ -38,7 +38,7 @@ header img {
   justify-content: space-between;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0.8em 0.5em;
+  padding: 0.8em 0em;
   flex-wrap: wrap;
 }
 
