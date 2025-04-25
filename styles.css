@@ -472,3 +472,16 @@ footer {
 #lang-switch:checked + .toggle-label .switch {
   transform: translateX(40px);
 }
+
+/* Responsive Adjustment */
+@media screen and (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .language-toggle {
+    margin-top: 10px;
+    justify-content: flex-start;
+  }
+}
