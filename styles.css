@@ -423,3 +423,52 @@ footer {
   -webkit-user-drag: none;
   -webkit-touch-callout: none;
 }
+
+.language-toggle {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.toggle-label {
+  background: #264653;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  width: 80px;
+  height: 32px;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+.toggle-label .lang {
+  flex: 1;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 0.85em;
+  z-index: 2;
+}
+
+.toggle-label .switch {
+  position: absolute;
+  width: 40px;
+  height: 100%;
+  background: #2a9d8f;
+  border-radius: 30px;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+#lang-switch {
+  display: none;
+}
+
+#lang-switch:checked + .toggle-label .switch {
+  transform: translateX(40px);
+}
