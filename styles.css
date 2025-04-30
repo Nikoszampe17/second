@@ -342,7 +342,7 @@ footer {
 }
 
 .card-back {
-  background: #8b5cf6;
+  background: #264653;
   color: white;
   transform: rotateY(180deg);
 }
