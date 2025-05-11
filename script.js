@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       0: {
         slidesPerView: 1,
-      }
-    }
+      },
+    },
   });
 
   // Pause on hover (desktop)
@@ -49,14 +49,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
- 
 // mobile hamburger toggle
-const hamburger = document.getElementById('hamburger');
-const navMenu   = document.getElementById('nav-menu');
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
 
-hamburger.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
 });
-
-
