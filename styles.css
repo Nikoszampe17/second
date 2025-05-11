@@ -13,7 +13,7 @@ header {
   background-color: #9cffff;
   color: white;
   padding-right: 1em;
-  height: 10rem;
+  height: 8rem;
   width: 100%;
 
   display: flex;
@@ -483,4 +483,32 @@ footer {
 .title {
   font-size: 0.9em;
   color: #3e7287;
+}
+
+.mobile-reminder {
+  text-align: center;
+  font-size: 0.95em;
+  color: #2a9d8f;
+  margin-top: -5px;
+  margin-bottom: 25px;
+  font-weight: 600;
+  background-color: #e0f7f4;
+  padding: 6px 12px;
+  border-radius: 8px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-reminder {
+    display: block;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
