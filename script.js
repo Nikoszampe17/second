@@ -49,10 +49,44 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// mobile hamburger toggle
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("nav-menu");
 
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
+
+  //LANGUAGE BUTTON 
+
+  // Set initial language to Greek unless saved in localStorage
+let currentLang = localStorage.getItem("lang") || "gr";
+
+// Load initial language on page load
+window.addEventListener("DOMContentLoaded", () => {
+  loadLanguage(currentLang);
 });
+
+// Toggle between GR and EN when button is clicked
+function toggleLanguage() {
+  currentLang = currentLang === "gr" ? "en" : "gr";
+  localStorage.setItem("lang", currentLang);
+  loadLanguage(currentLang);
+}
+
+// Load translations from the appropriate JSON file
+function loadLanguage(lang) {
+  fetch(`${lang}.json`)
+    .then((res) => res.json())
+    .then((translations) => {
+      // Update all elements with data-i18n attribute
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[key]) {
+          el.textContent = translations[key];
+        }
+      });
+
+     
+      // Update language toggle button text
+      const langText = document.getElementById("language-text");
+      if (langText) {
+        langText.textContent = lang === "gr" ? "GR / EN" : "EN / GR";
+      }
+    })
+    .catch((err) => console.error("Translation load error:", err));
+}
