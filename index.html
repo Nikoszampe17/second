@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nikos Zampetakis - Physiotherapist </title>
+  <title data-i18n="title">Nikolaos Zampetakis - Physiotherapist </title>
 
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
@@ -19,10 +19,7 @@
   <div class="header-container">
     <div class="logo-area">
       <img src="logo.png" alt="Nikos Zampetakis Logo" />
-      <div class="identity">
-        <span class="name">Nikolaos Zampetakis</span>
-        <span class="title">P.T., CertAcu</span>
-      </div>
+     
       <div class="lang-toggle">
         <input type="checkbox" id="languageSwitch">
         <label for="languageSwitch">
@@ -39,19 +36,16 @@
     <div class="logo-area">
       <img src="logo.png" alt="Nikos Zampetakis Logo" />
       <div class="identity">
-        <span class="name">Nikolaos Zampetakis</span>
-        <span class="title">PT, CertAcu</span>
+        <span class="name" data-i18n="Header_name">Nikolaos Zampetakis</span>
+        <span class="title" data-i18n="Header_subtitle">PT, CertAcu</span>
       </div>
     </div>
+<button class="lang-toggle" onclick="toggleLanguage()">
+  <i class="fas fa-globe"></i>
+  <span id="language-text">GR / EN</span>
+</button>
 
-    <div class="lang-toggle">
-      <input type="checkbox" id="languageSwitch">
-      <label for="languageSwitch">
-        <span class="lang-text gr">GR</span>
-        <span class="slider"></span>
-        <span class="lang-text en">EN</span>
-      </label>
-    </div>
+    
   </div>
 </header>
 
@@ -59,22 +53,23 @@
 
   <div class="container">
     <section id="about">
-      <h2>About</h2>
-     <p>Nikolaos Zampetakis is a licensed physiotherapist with comprehensive academic and clinical training in evidence-based physiotherapy and integrative pain management. He holds a BSc in Physiotherapy from the University of West Attica and is a certified acupuncturist, having completed specialized training through the University’s Center for Education and Life-Long Learning in collaboration with the Hellenic Physiotherapy Society of Algology.</p>
+      <h2 data-i18n="About_title">About</h2>
+     <p data-i18n="Paragraph_1">Nikolaos Zampetakis is a licensed physiotherapist with comprehensive academic and clinical training in evidence-based physiotherapy and integrative pain management. He holds a BSc in Physiotherapy from the University of West Attica and is a certified acupuncturist, having completed specialized training through the University’s Center for Education and Life-Long Learning in collaboration with the Hellenic Physiotherapy Society of Algology.</p>
 
-     <p>Nikolaos has gained diverse clinical experience through internships and placements in leading healthcare institutions such as Hospitales Universitarios San Roque in Spain, the General Hospital Asklipieio Voulas in Athens, and the General Hospital of Rethymno in Crete. His practice has spanned multiple departments, including rehabilitation, orthopedics, ICU, and neurosurgery, emphasizing a patient-centered approach tailored to both acute and chronic conditions.</p>
+     <p data-i18n="Paragraph_2">Nikolaos has gained diverse clinical experience through internships and placements in leading healthcare institutions such as Hospitales Universitarios San Roque in Spain, the General Hospital Asklipieio Voulas in Athens, and the General Hospital of Rethymno in Crete. His practice has spanned multiple departments, including rehabilitation, orthopedics, ICU, and neurosurgery, emphasizing a patient-centered approach tailored to both acute and chronic conditions.</p>
 
-     <p>His interest in the interplay between psychological and physical factors in rehabilitation is reflected in his scientific contributions, with co-authored publications in peer-reviewed journals exploring treatment expectations and pain sensitivity.</p>
-    <h3> Scientific Work</h3>
+     <p data-i18n="Paragraph_3">His interest in the interplay between psychological and physical factors in rehabilitation is reflected in his scientific contributions, with co-authored publications in peer-reviewed journals exploring treatment expectations and pain sensitivity.</p>
+     <p data-i18n="Paragraph_4"> His patient-centered approach focuses on thoroughly understanding the root cause of musculoskeletal issues to maximize treatment effectiveness. By applying key musculoskeletal physiotherapy principles in assessment, Nikos collaborates with each individual to develop a personalized treatment plan aimed at effectively managing pain and restoring mobility.</p>
+     <h3 data-i18n="Subtitle_publications"> Scientific Work</h3>
      <p> • Karanasios S, Martzoukos N, <u>Zampetakis N</u>, Paleta D, Sampsonis T, Vasilogeorgis I, Gioftsos G. Cross-Cultural Adaptation and Measurement Properties of the Expectations for Treatment Scale (ETS) for Greek-Speaking Patients. Cureus. 2023 Oct 4;15(10):e46457. doi: 10.7759/cureus.46457. PMID: 37927658; PMCID: PMC10623487.</p>
     <p> • Paleta D, Karanasios S, Diamantopoulos N, Martzoukos N, <u>Zampetakis N</u>, Moutzouri M, Gioftsos G. Associations of Treatment Outcome Expectations and Pain Sensitivity after Cervical Spine Manipulation in Patients with Chronic Non-Specific Neck Pain: A Cohort Study. Healthcare (Basel). 2024 Aug 26;12(17):1702. doi: 10.3390/healthcare12171702. PMID: 39273728; PMCID: PMC11395635.
 </p>
     </section>
 
     <section id="services">
-      <h2>Services</h2>
+      <h2 data-i18n="Services_title">Services</h2>
     
-   <p class="mobile-reminder">Tap and Hold for more!</p>
+   <p class="mobile-reminder" data-i18n="Mobile_note">Tap and Hold for more!</p>
 
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
@@ -91,8 +86,8 @@
                 </div>
                 <div class="card-back">
                   <div class="service-content">
-                    <h3>Acupuncture</h3>
-                    <h4> stimulates nerves and circulation to reduce pain and inflammation, promoting natural healing and tissue repair.  </h4>
+                    <h3 data-i18n="Acu_title">Acupuncture</h3>
+                    <h4 data-i18n="Acu_text"> stimulates nerves and circulation to reduce pain and inflammation, promoting natural healing and tissue repair.  </h4>
                   </div>
                 </div>
               </div>
@@ -109,8 +104,8 @@
                 </div>
                 <div class="card-back">
                   <div class="service-content">
-                    <h3>Dry Needling</h3>
-                    <h4> targets muscle trigger points to relieve deep tension, improve flexibility, and restore neuromuscular function </h4>
+                    <h3 data-i18n="Dry_title">Dry Needling</h3>
+                    <h4 data-i18n="Dry_text"> targets muscle trigger points to relieve deep tension, improve flexibility, and restore neuromuscular function </h4>
                   </div>
                 </div>
               </div>
@@ -127,8 +122,8 @@
                 </div>
                 <div class="card-back">
                   <div class="service-content">
-                    <h3>Post Operative Rehabilitation</h3>
-                    <h4> enhances post-surgical recovery by rebuilding strength, minimizing complications, and guiding safe return to activity. </h4>
+                    <h3 data-i18n="PostOP_title">Post Operative Rehabilitation</h3>
+                    <h4 data-i18n="PostOP_text"> enhances post-surgical recovery by rebuilding strength, minimizing complications, and guiding safe return to activity. </h4>
                   </div>
                 </div>
               </div>
@@ -145,8 +140,8 @@
                 </div>
                 <div class="card-back">
                   <div class="service-content">
-                    <h3>Musculoskeletal Physiotherapy</h3>
-                    <h4> manages joint, muscle, and nerve conditions using manual therapy and exercise to restore everyday movement efficiency. </h4>
+                    <h3 data-i18n="MuscPh_title">Musculoskeletal Physiotherapy</h3>
+                    <h4 data-i18n="MuscPh_text"> manages joint, muscle, and nerve conditions using manual therapy and exercise to restore everyday movement efficiency. </h4>
                   </div>
                 </div>
               </div>
@@ -163,8 +158,8 @@
                 </div>
                 <div class="card-back">
                   <div class="service-content">
-                    <h3>Sports Injury Rehabilitation</h3>
-                    <h4> focuses on athletic recovery by correcting biomechanics, accelerating healing, and preventing future performance-related injuries. </h4>
+                    <h3 data-i18n="SportRehab_title">Sports Injury Rehabilitation</h3>
+                    <h4 data-i18n="SportRehab_text"> focuses on athletic recovery by correcting biomechanics, accelerating healing, and preventing future performance-related injuries. </h4>
                   </div>
                 </div>
               </div>
@@ -182,11 +177,11 @@
     </section>
 
     <section id="contact" class="container">
-      <h2>Contact</h2>
-      <h3>Need more information or have a question?</h3>
+      <h2 data-i18n="Contact_title">Contact</h2>
+      <h3 data-i18n="Contact_question">Need more information or have a question?</h3>
       <div class="contact-grid">
         <div class="contact-info">
-          <p><i class="fas fa-user"></i> Nikolaos Zampetakis</p>
+          <p data-i18n="Contact_name"><i class="fas fa-user"></i> Nikolaos Zampetakis</p>
           <p><i class="fas fa-envelope"></i>
             <a href="mailto:zampetakisnikos@gmail.com">zampetakisnikos@gmail.com</a>
           </p>
@@ -214,7 +209,9 @@
   </div>
 
   <footer>
+    <p> All rights reserved.</p> 
     <p>&copy; 2025 Nikos Zampetakis</p>
+   
     <div class="social-icons">
       <ul>
         <li><a href="https://www.facebook.com/nikos.zampetakis.52" target="_blank"><i class="fab fa-facebook-f icon"></i></a></li>
