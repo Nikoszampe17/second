@@ -90,3 +90,9 @@ function loadLanguage(lang) {
     })
     .catch((err) => console.error("Translation load error:", err));
 }
+
+
+     //refresh on top
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
