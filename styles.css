@@ -486,3 +486,37 @@ footer {
   from { opacity: 0; transform: translateY(-5px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
+/*Back to top button*/
+#toTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 99;
+  background-color: #2a9d8f;
+  color: white;
+  border: none;
+  width: 55px;               /* Increased size */
+  height: 55px;              /* Increased size */
+  border-radius: 50%;        /* Makes it perfectly circular */
+  font-size: 22px;           /* Slightly larger icon */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#toTopBtn:hover {
+  background-color: #21867a;
+  transform: scale(1.1);
+}
+
+#toTopBtn i {
+  pointer-events: none;
+}
+
+
