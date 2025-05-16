@@ -90,9 +90,18 @@ function loadLanguage(lang) {
     })
     .catch((err) => console.error("Translation load error:", err));
 }
-
-
-     //refresh on top
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
+//Back to top button
+// Show button on scroll
+window.onscroll = function () {
+  const btn = document.getElementById("toTopBtn");
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
 };
+
+// Scroll to top on click
+document.getElementById("toTopBtn").addEventListener("click", function () {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
