@@ -90,11 +90,13 @@ function loadLanguage(lang) {
     })
     .catch((err) => console.error("Translation load error:", err));
 }
-//Back to top button
+
+// Back to top button
+
 // Show button on scroll
 window.onscroll = function () {
-  const btn = document.getElementById("toTopBtn");
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+  const btn = document.getElementById("backToTop");
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
     btn.style.display = "block";
   } else {
     btn.style.display = "none";
@@ -102,6 +104,10 @@ window.onscroll = function () {
 };
 
 // Scroll to top on click
-document.getElementById("toTopBtn").addEventListener("click", function () {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+document.getElementById("backToTop").addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 });
+
