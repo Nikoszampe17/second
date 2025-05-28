@@ -439,6 +439,13 @@ footer {
   flex-wrap: wrap;
 }
 
+ .about-images {
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+}
+
+
 .about-images img {
   width: 45%;
   max-width: 300px;
