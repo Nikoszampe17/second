@@ -5,7 +5,7 @@ body {
   padding: 0;
   background-color: #f8f9fa;
   color: #333;
-  font-size: 1.1em;
+  font-size: 1.0em;
   width: 100%;
   box-sizing: border-box;
 }
@@ -38,7 +38,10 @@ header img {
   animation: fadeIn 1.2s ease forwards;
   animation-delay: 0.3s;
 }
-
+/* Alignment in About section*/
+#about p {
+  text-align: justify;
+}
 
 
 /* Animations */
