@@ -39,6 +39,11 @@ header img {
   animation-delay: 0.3s;
 }
 
+/* Gap sto scientific work  */
+#about .photo-wrapper:last-of-type {
+  margin-bottom: 2.5rem;
+}
+
 
 /* Animations */
 @keyframes fadeIn {
