@@ -91,23 +91,43 @@ function loadLanguage(lang) {
     .catch((err) => console.error("Translation load error:", err));
 }
 
-// Back to top button
+// Photos
 
-// Show button on scroll
-window.onscroll = function () {
-  const btn = document.getElementById("backToTop");
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    btn.style.display = "block";
-  } else {
-    btn.style.display = "none";
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll('.about-images img');
+
+  function handleScrollAnimation() {
+    images.forEach(img => {
+      const rect = img.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        img.classList.add('visible');
+      } else {
+        img.classList.remove('visible');
+      }
+    });
   }
-};
 
-// Scroll to top on click
-document.getElementById("backToTop").addEventListener("click", function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+  window.addEventListener('scroll', handleScrollAnimation);
+  handleScrollAnimation(); // trigger on load
 });
+// trigger animation
+function handleSlideAnimations() {
+  const slides = document.querySelectorAll('.slide-left, .slide-right');
+
+  slides.forEach(slide => {
+    const rect = slide.getBoundingClientRect();
+    const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+    if (isVisible) {
+      slide.classList.add('visible');
+      slide.classList.remove('out');
+    } else {
+      slide.classList.remove('visible');
+      slide.classList.add('out');
+    }
+  });
+}
+
+window.addEventListener('scroll', handleSlideAnimations);
+window.addEventListener('load', handleSlideAnimations);
 
