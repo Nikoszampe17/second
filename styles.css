@@ -433,7 +433,7 @@ footer {
   width: 100%;               /* Ensure full width */
   max-width: 100%;           /* Prevent centering by layout */
   box-sizing: border-box;
-  margin : 0 2rem 0 1rem;
+  margin : 0 8rem 0 1rem;
 
 }
 /* logo-text */
