@@ -131,3 +131,25 @@ function handleSlideAnimations() {
 window.addEventListener('scroll', handleSlideAnimations);
 window.addEventListener('load', handleSlideAnimations);
 
+// Return to Top Button
+document.addEventListener('DOMContentLoaded', function() {
+  const returnToTop = document.getElementById('return-to-top');
+  
+  // Show/hide button based on scroll position
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 100) {
+      returnToTop.classList.add('show');
+    } else {
+      returnToTop.classList.remove('show');
+    }
+  });
+  
+  // Smooth scroll to top
+  returnToTop.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+});
