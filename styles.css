@@ -25,7 +25,9 @@ header {
 
 header img {
   width: 90px;
-  /* margin-bottom: 20px; */
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
 }
 
 .top-header {
