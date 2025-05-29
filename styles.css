@@ -580,3 +580,63 @@ footer {
 #return-to-top:hover i {
   transform: scale(1.1) translateY(-3px);
 }
+
+/* Mobile Navigation - Only shows below 768px */
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-nav {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-top: 1px solid #e5e7eb;
+    transform: translateY(100%);
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .mobile-nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobile-nav li {
+    flex: 1;
+    text-align: center;
+  }
+
+  .mobile-nav a {
+    display: block;
+    padding: 12px 5px;
+    color: #264653;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+  }
+
+  .mobile-nav a:hover {
+    background: #f0f9f8;
+    color: #2a9d8f;
+  }
+
+  /* Adjust header height to accommodate nav */
+  .top-header {
+    position: relative;
+    height: 9rem; /* Slightly taller to make room for nav */
+  }
+
+  /* Push language button down */
+  .lang-toggle {
+    top: 60px; /* Adjusted from 40px */
+    right: 15px; /* Reduced from 25px for mobile */
+  }
+}
