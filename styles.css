@@ -544,43 +544,38 @@ footer {
 }
 
 
-/* Mobile header nav - hidden on desktop */
+/* Ensure the mobile nav is hidden by default */
 .mobile-header-nav {
   display: none;
-  justify-content: center;
-  gap: 20px;
-  padding: 0.5em 0;
-  font-weight: bold;
-  font-size: 1em;
 }
 
-.mobile-header-nav a {
-  color: #264653;
-  text-decoration: none;
-  position: relative;
-}
-
-.mobile-header-nav a::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: #2a9d8f;
-  bottom: -2px;
-  left: 0;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.3s ease;
-}
-
-.mobile-header-nav a:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
-/* Show only on small screens */
+/* Mobile-specific layout */
 @media screen and (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
   .mobile-header-nav {
     display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    padding: 0.5em 0;
+    border-top: 1px solid #ccc;
+    background-color: #ffffff;
+  }
+
+  .mobile-header-nav a {
+    color: #264653;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95em;
+    transition: color 0.3s ease;
+  }
+
+  .mobile-header-nav a:hover {
+    color: #2a9d8f;
   }
 }
