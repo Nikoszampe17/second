@@ -592,6 +592,9 @@ footer {
     top: 0;
     height: auto; /* Remove fixed height */
     padding-bottom: 50px; /* Space for nav */
+    /* Fix for Safari */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
   }
 
   .mobile-nav {
@@ -605,6 +608,9 @@ footer {
     border-top: 1px solid #e5e7eb;
     z-index: 999;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+     /* safari fix */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
 
   .mobile-nav ul {
