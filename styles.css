@@ -10,6 +10,11 @@ body {
   box-sizing: border-box;
 }
 
+/* No horizontal scroll */
+html, body {
+  overflow-x: hidden;
+}
+
 /* Header */
 header {
   background-color: #9cffff;
