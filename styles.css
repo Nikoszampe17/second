@@ -10,10 +10,10 @@ body {
   box-sizing: border-box;
 }
 
-/* No horizontal scroll */
+/* prevents horizontal scrolling*/
 html, body {
   overflow-x: hidden;
-}
+} 
 
 /* Header */
 header {
@@ -30,9 +30,7 @@ header {
 
 header img {
   width: 90px;
-  user-select: none;
-  -webkit-user-drag: none;
-  -webkit-touch-callout: none;
+  /* margin-bottom: 20px; */
 }
 
 .top-header {
@@ -44,11 +42,6 @@ header img {
   opacity: 0;
   animation: fadeIn 1.2s ease forwards;
   animation-delay: 0.3s;
-}
-
-/* Gap sto scientific work  */
-#about .photo-wrapper:last-of-type {
-  margin-bottom: 2.5rem;
 }
 
 
@@ -446,13 +439,6 @@ footer {
   flex-wrap: wrap;
 }
 
- .about-images {
-  user-select: none;
-  -webkit-user-drag: none;
-  -webkit-touch-callout: none;
-}
-
-
 .about-images img {
   width: 45%;
   max-width: 300px;
@@ -545,42 +531,5 @@ footer {
 }
 
 .slide-right.out {
-  animation: slideOutRight 0.6s forward 
-}
-
-
-/* Ensure the mobile nav is hidden by default */
-.mobile-header-nav {
-  display: none;
-}
-
-/* Mobile-specific layout */
-@media screen and (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .mobile-header-nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-    padding: 0.5em 0;
-    border-top: 1px solid #ccc;
-    background-color: #ffffff;
-  }
-
-  .mobile-header-nav a {
-    color: #264653;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95em;
-    transition: color 0.3s ease;
-  }
-
-  .mobile-header-nav a:hover {
-    color: #2a9d8f;
-  }
+  animation: slideOutRight 0.6s forwards;
 }
