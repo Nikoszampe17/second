@@ -153,3 +153,38 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+
+// Mobile Navigation Language Support
+document.addEventListener('DOMContentLoaded', function() {
+  // Update nav text when language changes
+  function updateNavLanguage(lang) {
+    if (window.innerWidth >= 768) return;
+    
+    fetch(`${lang}.json`)
+      .then(res => res.json())
+      .then(translations => {
+        document.querySelectorAll('.mobile-nav [data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (translations[key]) {
+            el.textContent = translations[key];
+          }
+        });
+      })
+      .catch(err => console.error('Nav translation error:', err));
+  }
+
+  // Initial load
+  if (window.innerWidth < 768) {
+    updateNavLanguage(localStorage.getItem("lang") || "gr");
+  }
+
+  // Update on language toggle
+  window.toggleLanguage = function() {
+    const currentLang = localStorage.getItem("lang") || "gr";
+    const newLang = currentLang === "gr" ? "en" : "gr";
+    localStorage.setItem("lang", newLang);
+    loadLanguage(newLang);
+    updateNavLanguage(newLang);
+  }
+});
