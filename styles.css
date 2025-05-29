@@ -578,5 +578,5 @@ footer {
 }
 
 #return-to-top:hover i {
-  transform: translateY(-3px);
+  transform: scale(1.1) translateY(-3px);
 }
