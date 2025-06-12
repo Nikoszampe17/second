@@ -18,7 +18,7 @@
 </head>
 
 <body>
-  
+
 <header class="top-header">
   <div class="header-container">
     <div class="logo-area">
@@ -33,21 +33,83 @@
   <span id="language-text">GR / EN</span>
 </button>
 
-    <!-- Mobile Navigation (shown only < 768px) -->
+<!-- Mobile Navigation (shown only < 768px) -->
 <nav class="mobile-nav">
   <ul>
-    <li><a href="#about" data-i18n="About_title">Πληροφορίες</a></li>
-    <li><a href="#services" data-i18n="Services_title">Υπηρεσίες</a></li>
-    <li><a href="#contact" data-i18n="Contact_title">Επικοινωνία</a></li>
+    <li><a href="#services" data-i18n="Services_title">Θεραπείες</a></li> 
+     <li><a href="#about" data-i18n="About_title">Πληροφορίες</a></li>
+     <li><a href="#contact" data-i18n="Contact_title">Επικοινωνία</a></li>
   </ul>
+  
 </nav>
-
     
   </div>
 </header>
 
   <div class="container">
-    <section id="about">
+   <section id="services">
+      <h2 data-i18n="Services_title">Θεραπείες</h2>
+    
+   <!--<p class="mobile-reminder" data-i18n="Mobile_note">Πιέστε και Κρατήστε για περισσότερα!</p>  -->
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+          <!-- Service Cards -->
+
+<div class="swiper-slide service-box">
+    <h3 data-i18n="Acu_title">Βελονισμός</h3>
+    <h4 data-i18n="Acu_text">Διεγείρει τα νεύρα με σκοπό την μείωση του πόνου, ενισχύοντας την φυσική διαδικασία επούλωσης.  </h4>
+    <div class="service-img">
+      <img src="images/Acupuncture.png" alt="Acupuncture">
+    </div>
+</div> 
+
+<div class="swiper-slide service-box">
+    <h3 data-i18n="Dry_title">Τεχνικές Ξηρής Βελόνας</h3> 
+    <h4 data-i18n="Dry_text"> Στοχεύουν στα Trigger Points των μυών και ανακουφίζουν από την μυϊκή τάση και τον πόνο αυξάνοντας το εύρος κίνησης. </h4>
+    <div class="service-img">
+       <img src="images/DryNeedling.png" alt="Dry Needling" />
+    </div>
+  </div> 
+
+<div class="swiper-slide service-box">
+   <h3 data-i18n="PostOP_title">Μετεγχειρητική Αποκατάσταση</h3>
+    <h4 data-i18n="PostOP_text"> Βοηθάει στην ανάκτηση της δύναμης και της λειτουργικότητας ελαχιστοποιώντας τις επιπλοκές με γνώμονα την ασφαλή επιστροφή στην καθημερινότητα. </h4>
+    <div class="service-img">
+       <img src="images/PostOp.png" alt="Post Operative Rehabilitation" />
+    </div>
+ </div> 
+
+
+<div class="swiper-slide service-box">
+   <h3 data-i18n="MuscPh_title">Μυοσκελετική Φυσικοθεραπεία</h3>
+    <h4 data-i18n="MuscPh_text"> Παθήσεις αρθρώσεων, μυών και νεύρων αντιμετωπίζονται με χειροθεραπευτικές τεχνικές και θεραπευτική άσκηση. </h4>
+    <div class="service-img">
+       <img src="images/MuscPhys.png" alt="Musculoskeletal Physiotherapy" />
+    </div>
+</div> 
+
+<div class="swiper-slide service-box">
+   <h3 data-i18n="SportRehab_title">Αθλητική Φυσικοθεραπεία</h3>
+    <h4 data-i18n="SportRehab_text"> Επικεντρώνεται στην πρόληψη τραυματισμών, διαχείριση πόνου, βελτίωση απόδοσης με σκοπό την βέλτιστη επιστροφή στην δραστηριότητα. </h4>
+    <div class="service-img">
+       <img src="images/SportsRehab.png" alt="Sports Injury Rehabilitation" />
+    </div>
+</div> 
+
+
+        </div>
+
+        <!-- Swiper nav 
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>  -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+  
+   
+ <section id="about">
       <h2 data-i18n="About_title">Πληροφορίες</h2>
      <p data-i18n="Paragraph_1">Ο Νίκος Ζαμπετάκης είναι φυσικοθεραπευτής με ολοκληρωμένη ακαδημαϊκή και κλινική εξάσκηση στην φυσικοθεραπεία και στην διαχείριση του πόνου. Είναι πτυχιούχος του Τμήματος Φυσικοθεραπείας του Πανεπιστημίου Δυτικής Αττικής και κατέχει πιστοποίηση στον Βελονισμό, έχοντας ολοκληρώσει με επιτυχία εξειδικευμένη εκπαίδευση από το Πανεπιστήμιο Δυτικής Αττικής σε συνεργασία με την Ελληνική Φυσικοθεραπευτική Εταιρία Αλγολογίας. Είναι μέλος του Πανελλήνιου Συλλόγου Φυσικοθεραπευτών και της Ελληνικής Φυσικοθεραπευτικής Εταιρίας Αλγολογίας.</p>
 
@@ -69,115 +131,6 @@
 </p>
     </section>
 
-    <section id="services">
-      <h2 data-i18n="Services_title">Υπηρεσίες</h2>
-    
-   <p class="mobile-reminder" data-i18n="Mobile_note">Πιέστε και Κρατήστε για περισσότερα!</p>
-
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-
-          <!-- Service Cards -->
-
-          <div class="swiper-slide">
-            <div class="service-card">
-              <div class="card-inner">
-                <div class="card-front">
-                  <div class="service-image">
-                    <img src="images/Acupuncture.png" alt="Acupuncture" />
-                  </div>
-                </div>
-                <div class="card-back">
-                  <div class="service-content">
-                    <h3 data-i18n="Acu_title">Βελονισμός</h3>
-                    <h4 data-i18n="Acu_text">Διεγείρει τα νεύρα με σκοπό την μείωση του πόνου, ενισχύοντας την φυσική διαδικασία επούλωσης.  </h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-         <div class="swiper-slide">
-            <div class="service-card">
-              <div class="card-inner">
-                <div class="card-front">
-                  <div class="service-image">
-                    <img src="images/DryNeedling.png" alt="Dry Needling" />
-                  </div>
-                </div>
-                <div class="card-back">
-                  <div class="service-content">
-                    <h3 data-i18n="Dry_title">Τεχνικές Ξηρής Βελόνας</h3>
-                    <h4 data-i18n="Dry_text"> Στοχεύουν στα Trigger Points των μυών και ανακουφίζουν από την μυϊκή τάση και τον πόνο αυξάνοντας το εύρος κίνησης. </h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="service-card">
-              <div class="card-inner">
-                <div class="card-front">
-                  <div class="service-image">
-                    <img src="images/PostOp.png" alt="Post Operative Rehabilitation" />
-                  </div>
-                </div>
-                <div class="card-back">
-                  <div class="service-content">
-                    <h3 data-i18n="PostOP_title">Μετεγχειρητική Αποκατάσταση</h3>
-                    <h4 data-i18n="PostOP_text"> Βοηθάει στην ανάκτηση της δύναμης και της λειτουργικότητας ελαχιστοποιώντας τις επιπλοκές με γνώμονα την ασφαλή επιστροφή στην καθημερινότητα. </h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="service-card">
-              <div class="card-inner">
-                <div class="card-front">
-                  <div class="service-image">
-                    <img src="images/MuscPhys.png" alt="Musculoskeletal Physiotherapy" />
-                  </div>
-                </div>
-                <div class="card-back">
-                  <div class="service-content">
-                    <h3 data-i18n="MuscPh_title">Μυοσκελετική Φυσικοθεραπεία</h3>
-                    <h4 data-i18n="MuscPh_text"> Παθήσεις αρθρώσεων, μυών και νεύρων αντιμετωπίζονται με χειροθεραπευτικές τεχνικές και θεραπευτική άσκηση. </h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="service-card">
-              <div class="card-inner">
-                <div class="card-front">
-                  <div class="service-image">
-                    <img src="images/SportsRehab.png" alt="Sports Injury Rehabilitation" />
-                  </div>
-                </div>
-                <div class="card-back">
-                  <div class="service-content">
-                    <h3 data-i18n="SportRehab_title">Αθλητική Φυσικοθεραπεία</h3>
-                    <h4 data-i18n="SportRehab_text"> Επικεντρώνεται στην πρόληψη τραυματισμών, διαχείριση πόνου, βελτίωση απόδοσης με σκοπό την βέλτιστη επιστροφή στην δραστηριότητα. </h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-
-        <!-- Swiper nav -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </section>
 
     <section id="contact" class="container">
       <h2 data-i18n="Contact_title">Επικοινωνία</h2>
@@ -213,7 +166,7 @@
 
   <footer>
      
-    <p>&copy; 2025 Nikos Zampetakis. All rights reserved.</p>
+    <p>&copy; 2025 Nikolaos Zampetakis. All rights reserved.</p>
    
     <div class="social-icons">
       <ul>
@@ -232,10 +185,12 @@
   <!-- Your JS -->
   <script src="script.js"></script>
 
- <!-- Return to top button--> 
+
+  <!-- Return to top button--> 
 <button id="return-to-top" aria-label="Return to top">
   <i class="fas fa-arrow-up"></i>
 </button>
+
 
 </body>
 
