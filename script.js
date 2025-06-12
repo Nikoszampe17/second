@@ -1,53 +1,54 @@
+// SWIPER
 document.addEventListener("DOMContentLoaded", function () {
-  var swiper = new Swiper(".mySwiper", {
+  const swiper = new Swiper(".mySwiper", {
     loop: true,
+    centeredSlides: false,
     spaceBetween: 20,
+    slidesPerView: 3,
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
     },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
-    slidesPerView: 3,
+    //navigation: {
+    //  nextEl: ".swiper-button-next",
+    //  prevEl: ".swiper-button-prev",
+   // },
     breakpoints: {
-      1024: {
-        slidesPerView: 2.5,
+      0: {
+        slidesPerView: 1,
       },
       768: {
         slidesPerView: 2,
       },
-      0: {
-        slidesPerView: 1,
+      1024: {
+        slidesPerView: 2.5,
       },
-    },
+    }
   });
 
-  // Pause on hover (desktop)
-  const swiperContainer = document.querySelector(".mySwiper");
+  // Pause on hover (PC)
+  const swiperEl = document.querySelector('.swiper');
+  swiperEl.addEventListener('mouseenter', () => swiper.autoplay.stop());
+  swiperEl.addEventListener('mouseleave', () => swiper.autoplay.start());
 
-  swiperContainer.addEventListener("mouseenter", function () {
-    swiper.autoplay.stop();
-  });
-
-  swiperContainer.addEventListener("mouseleave", function () {
-    swiper.autoplay.start();
-  });
-
-  // Pause on touch (mobile/tablets)
-  swiperContainer.addEventListener("touchstart", function () {
-    swiper.autoplay.stop();
-  });
-
-  swiperContainer.addEventListener("touchend", function () {
-    swiper.autoplay.start();
+  // Tap to pause/resume (Mobile)
+  let isPaused = false;
+  swiperEl.addEventListener('touchstart', () => {
+    if (!isPaused) {
+      swiper.autoplay.stop();
+      isPaused = true;
+    } else {
+      swiper.autoplay.start();
+      isPaused = false;
+    }
   });
 });
+
+
 
 
 
@@ -153,7 +154,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
-
 
 // Mobile Navigation Language Support
 document.addEventListener('DOMContentLoaded', function() {
